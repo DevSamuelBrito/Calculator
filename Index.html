@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Calculator</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
-                
-    <script src='main.js'></script>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-55"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="calculator">
-        <div class="result">0</div>
-        <div class="buttons">
-            <button class="bg-gray">C</button>
-            <button class="bg-gray">±</button>
-            <button class="bg-gray">%</button>
-            <button class="bg-orange">÷</button>
+      <input id="result" readonly />
+      <div class="buttons">
+        <button class="bg-orange" onclick="appendToResult('+')">+</button>
 
-            <button class="bg-light-gray">7</button>
-            <button class="bg-light-gray">8</button>
-            <button class="bg-light-gray">9</button>
-            <button class="bg-orange">x</button>
-
-            <button class="bg-light-gray">4</button>
-            <button class="bg-light-gray">5</button>
-            <button class="bg-light-gray">6</button>
-            <button class="bg-orange">-</button>
-
-            <button class="bg-light-gray">1</button>
-            <button class="bg-light-gray">2</button>
-            <button class="bg-light-gray">3</button>
-            <button class="bg-orange">+</button>
-
-            <button class="bg-light-gray button-zero">0</button>
-            <button class="bg-light-gray">,</button>
-            <button class="bg-orange">=</button>
-           
-        </div>
+        <button class="bg-light-gray" onclick="appendToResult('7')">7</button>
+        <button class="bg-light-gray" onclick="appendToResult('8')">8</button>
+        <button class="bg-light-gray" onclick="appendToResult('9')">9</button>
+        <button class="bg-orange" onclick="appendToResult('-')">-</button>
+        <button class="bg-light-gray" onclick="appendToResult('4')">4</button>
+        <button class="bg-light-gray" onclick="appendToResult('5')">5</button>
+        <button class="bg-light-gray" onclick="appendToResult('6')">6</button>
+        <button class="bg-orange" onclick="appendToResult('*')">*</button>
+        <button class="bg-light-gray" onclick="appendToResult('1')">1</button>
+        <button class="bg-light-gray" onclick="appendToResult('2')">2</button>
+        <button class="bg-light-gray" onclick="appendToResult('3')">3</button>
+        <button class="bg-orange" onclick="appendToResult('/')">/</button>
+        <button class="bg-light-gray " onclick="appendToResult('0')">
+          0
+        </button>
+        <button class="bg-light-gray" onclick="appendToResult(',')">,</button>
+        <button class="bg-light-gray" onclick="appendToResult('.')">.</button>
+        <button class="bg-orange s" onclick="clearResult()">C</button>
+        <button class="bg-orange " onclick="deleteResult()">del</button>
+        <button class="bg-orange button-equals" onclick="calculate()">=</button>
+      </div>
     </div>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
